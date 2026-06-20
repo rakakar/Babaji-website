@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Merriweather", Georgia, serif;
+  --font-hindi: "Tiro Devanagari Hindi", "Mukta", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  
+  /* Editorial Aesthetic Tones */
+  --color-ivory-50: #FAF8F2; /* Exquisite warm-sand cotton paper background */
+  --color-ivory-100: #FFFDF9; /* Clean light linen white for cards to pop */
+  --color-ivory-200: #EAE3D2; /* Muted delicate warm clay line borders */
+  --color-clay-600: #7D6B58; /* Elegant mineral warm clay secondary */
+  --color-clay-800: #3D352E; /* Rich readable dark espresso reading ink */
+  --color-clay-900: #1E1B18; /* Rich near-black iron-gall accent ink */
+  --color-ochre-600: #C28D50; /* Distinctive exquisite warm antique gold */
+  --color-ochre-700: #9E6F33; /* Resonant darker gold/bronze for highlights and hover */
+
+  /* Custom overrides for default tailwind colors to match fine editorial print */
+  --color-amber-50: #FAF5EA;
+  --color-amber-100: #F4EAD4;
+  --color-amber-200: #ECDAB6;
+  --color-amber-800: #7A571A;
+  --color-amber-900: #593D0E;
+
+  --color-emerald-50: #F2F7F3;
+  --color-emerald-100: #E3EDE4;
+  --color-emerald-200: #CBE0CD;
+  --color-emerald-800: #33593D;
+  --color-emerald-900: #25402C;
+
+  --color-rose-50: #FAF4F2;
+  --color-rose-100: #F6E6E1;
+  --color-rose-200: #EDC6BD;
+  --color-rose-800: #884A3B;
+  --color-rose-900: #6B3427;
+
+  --color-orange-50: #FAF6ED;
+  --color-orange-100: #F5E9D1;
+  --color-orange-200: #EAD4AD;
+  --color-orange-850: #775116;
+  --color-orange-900: #5B3E0E;
+}
+
+/* Custom styles for classic serene reading experience */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+.devanagari-text {
+  font-family: var(--font-hindi), var(--font-serif);
+}
+
+.english-text {
+  font-family: var(--font-serif), var(--font-sans);
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ivory-200);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-clay-600);
+}
+
+/* Hide scrollbar utility for touch/swipe panels like the mobile timeline */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
